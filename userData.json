@@ -1,0 +1,11 @@
+[
+    {
+     "displayName": "My Name",
+     "username": "username",
+     "password": "password",
+     "uuid": "01", 
+     "following": [],
+     "followers": [],
+     "groups": []
+    }
+]
