@@ -1,15 +1,27 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.create{
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+    margin-top: 5%;
+}
 #header-wrapper{
     display: flex;
     background-color: aquamarine;
     width: 100%;
     padding-left: 8px;
 }
-
 #header-wrapper > h1 {
     font-size: 8em;
     margin: 0px;
 }
-
 #user-profile-image{
     min-width: 240px;
     min-height: 240px;
@@ -17,28 +29,24 @@
     border: 1px solid black;
     margin-right: 50px;
 }
-
 .button-row{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-
 .button-row > button{
-    font-family: 'Bebas Neue';
+    font-family: 'Rig Solid';
     font-size: 2em;
     height: 50px;
     width: 30%;
     border-radius: 8px;
 }
-
 #profile-name{
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Rig Solid', sans-serif;
     font-size: 8em;
     margin-top: 0px;
     margin: 0px;
 }
-
 .row-flex{
     display: flex;
     flex-direction: row;
@@ -46,8 +54,7 @@
     padding-left: 15%;
     padding-right: 15%;
 }
-
 body{
     all: unset;
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Rig Solid', sans-serif;
 }
