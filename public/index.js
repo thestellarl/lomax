@@ -18,7 +18,11 @@ window.onclick = function(event) {
  }
 }
 
-
+function toggleEntry(element){
+  var body = element.querySelector("#accountAction");
+  element.querySelector(".arrowIcon").classList.toggle('rotate90');
+  // element.querySelector("accountAction").classList.toggle('showDropDown');    
+};
 
 // sell.addEventListener('click', function(event){
 //     modal.style.display = "block";
