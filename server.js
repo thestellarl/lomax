@@ -39,6 +39,11 @@ app.get('/profile', function (req, res) {
 app.get('/create', function (req, res) {
     res.render('create');
 });
+
+app.get('/login', function (req, res) {
+    res.render('login', context);
+});
+
 app.use(session({
     secret: 'keyboard cat',
     resave: false,
