@@ -133,6 +133,10 @@ a{
   margin: 1em;
 }
 
+.center{
+  display: flex;
+  justify-content: center;
+}
 body{
     all: unset;
     font-family: 'Helvetica', sans-serif;
