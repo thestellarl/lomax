@@ -41,7 +41,7 @@ app.get('/create', function (req, res) {
 });
 
 app.get('/login', function (req, res) {
-    res.render('login', context);
+    res.render('login', {layout: null});
 });
 
 app.use(session({
