@@ -6,6 +6,28 @@
     width: 100%;
 }
 
+#accountAction{
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 15em;
+  height: 3em;
+  overflow-y: hidden; 
+  cursor: pointer;
+}
+
+.showDropDown{
+  overflow-y: visible;
+}
+
+.arrowIcon{
+  transition: transform 0.5s;
+}
+
+.rotate90{
+  transform: rotateZ(90deg);
+}
+
 a{
     text-decoration: none;
     color: black;
@@ -86,9 +108,11 @@ a{
     background-color:#DCD0F9;
     width: 100%;
     padding-left: 8px;
+    align-items: center;
+    justify-content: space-between;
 }
-#header-wrapper > h1 {
-    font-size: 8em;
+#header-title {
+    font-size: 5em;
     margin: 10px;
 }
 #user-profile-image{
