@@ -30,7 +30,7 @@
 
 a{
     text-decoration: none;
-    color: black;
+    color: inherit;
 }
 .hyperlinks{
     display: block;
@@ -105,7 +105,7 @@ a{
 
 #header-wrapper{
     display: flex;
-    background-color:#DCD0F9;
+    background-color:#F28F3B;
     width: 100%;
     padding-left: 8px;
     align-items: center;
@@ -114,6 +114,7 @@ a{
 #header-title {
     font-size: 5em;
     margin: 10px;
+    color: #588B8B;
 }
 #user-profile-image{
     min-width: 240px;

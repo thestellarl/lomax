@@ -82,10 +82,6 @@ app.get('/register', redirectHome, function (req, res) {
     res.render('create');
 });
 
-app.get('/login', function (req, res) {
-    res.render('login', {layout: null});
-});
-
 app.use(session({
     secret: 'keyboard cat',
     resave: false,
@@ -94,7 +90,7 @@ app.use(session({
 
 app.get('/login', redirectHome, function (req, res) {
     const { userId } = req.session;
-    res.render('login', );
+    res.render('login', {layout: null});
 });
 
 app.post('/register', function (req, res) {
