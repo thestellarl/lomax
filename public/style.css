@@ -138,6 +138,37 @@ body{
     font-family: 'Helvetica', sans-serif;
     background-color: #F2EFEA;
 }
+
+.search-wrapper{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.results-wrapper{
+  display: flex;
+}
+
+.result-img{
+  border: 1px solid black;
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+}
+
+.result-wrapper{
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  cursor: pointer;
+  user-select: none;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.result-wrapper:hover{
+  background-color: blue;
+}
 /* .post {
     display: inline-block;
     vertical-align: top;

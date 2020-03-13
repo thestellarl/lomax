@@ -36,6 +36,10 @@ app.get('/profile', function (req, res) {
     res.render('profile_page');
 });
 
+app.get('/search', function(req, res) {
+    res.render('search');
+});
+
 app.get('/create', function (req, res) {
     res.render('create');
 });
