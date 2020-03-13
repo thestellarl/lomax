@@ -40,6 +40,10 @@ app.get('/search', function(req, res) {
     res.render('search');
 });
 
+app.post('/search', function(req, res) {
+    res.send('blah');
+});
+
 app.get('/create', function (req, res) {
     res.render('create');
 });

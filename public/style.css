@@ -169,6 +169,10 @@ body{
 .result-wrapper:hover{
   background-color: blue;
 }
+
+#search-input{
+  
+}
 /* .post {
     display: inline-block;
     vertical-align: top;

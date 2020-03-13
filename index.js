@@ -18,6 +18,7 @@ window.onclick = function(event) {
  }
 }
 
+const searchInput = document.getElementById('search-input')[0];
 
 
 // sell.addEventListener('click', function(event){
