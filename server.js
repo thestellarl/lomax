@@ -116,12 +116,16 @@ app.post('/login', function (req, res) {
 });
 
 app.post('/logout', redirectLogin, function (req, res) {
+<<<<<<< HEAD
     req.session.destroy(err => {
         if(err) {
             return res.redirect('/login');
         }
         res.clearCookie('sid');
     });
+=======
+    
+>>>>>>> lomax-story-userlogin
 });
 
 app.listen(3000);
