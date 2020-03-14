@@ -71,7 +71,6 @@ app.get('/uploadtrack', redirectLogin, function (req, res) {
 app.get('/', (req, res, next) => {
     res.redirect('/login');
 });
-
 app.get('/profile', redirectLogin, function (req, res) {
     const { userId } = req.session;
     sess = req.session; 
@@ -80,7 +79,12 @@ app.get('/profile', redirectLogin, function (req, res) {
                                 numFollowing: userMap[userId].following.length,
                                 username: userMap[userId].username
                             });
+app.get('/follow', function (req, res) {
+    res.render('follow_page');
 });
+
+app.get('/create', function (req, res) {
+    res.render('create');
 
 app.get('/register', redirectHome, function (req, res) {
     res.render('create');
@@ -116,16 +120,12 @@ app.post('/login', function (req, res) {
 });
 
 app.post('/logout', redirectLogin, function (req, res) {
-<<<<<<< HEAD
-    req.session.destroy(err => {
+      req.session.destroy(err => {
         if(err) {
             return res.redirect('/login');
         }
         res.clearCookie('sid');
     });
-=======
-    
->>>>>>> lomax-story-userlogin
 });
 
 app.listen(3000);

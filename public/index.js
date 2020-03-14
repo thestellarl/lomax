@@ -24,71 +24,26 @@ function toggleEntry(element){
   // element.querySelector("accountAction").classList.toggle('showDropDown');    
 };
 
-// sell.addEventListener('click', function(event){
-//     modal.style.display = "block";
-//     modalBackdrop.style.display = "block";
-//  });
+var follow = document.getElementById('follow-button');
+var edit = document.getElementById('edit-button');
+var bio = document.getElementById('bio');
 
-//  var textInput = document.getElementById('post-text-input');
-//  var imgInput = document.getElementById('post-photo-input');
-//  var priceInput = document.getElementById('post-price-input');
-//  var cityInput = document.getElementById('post-city-input');
+function followFunction(){
+  console.log("test");
+  alert("Followed!");
+  follow.innerHTML = "Following";
+}
+if(follow) {
+  follow.addEventListener('click', followFunction);
+}
 
-// function selectButton(){
-//      var chosenCondition = document.querySelector('input[name="post-condition"]:checked');
-//      return chosenCondition.value;
-//  }
 
-//  function addObject(){
-//     var objectSection = document.createElement('div');
-//     objectSection.classList.add("post");
 
-//     objectSection.setAttribute('data-price', priceInput.value);
-//     objectSection.setAttribute('data-city', cityInput.value);
-//     objectSection.setAttribute('data-condition', selectButton());
-
-//     var objectContents = document.createElement('div');
-//     objectContents.classList.add('post-contents');
-//     objectSection.appendChild(objectContents);
-
-//     var objectPhoto = document.createElement('div');
-//     objectPhoto.classList.add('post-image-container');
-//     objectContents.appendChild(objectPhoto);
-
-//     var realPhoto = document.createElement('img');
-//     realPhoto.src = imgInput.value;
-//     objectPhoto.appendChild(realPhoto);
-
-//     var sectionInfo = document.createElement('div');
-//     sectionInfo.classList.add('post-info-container');
-//     objectContents.appendChild(sectionInfo);
-
-//     var sectionTitle = document.createElement('a');
-//     sectionTitle.setAttribute('href', '#');
-//     sectionTitle.classList.add('post-title');
-//     sectionTitle.textContent = textInput.value;
-//     sectionInfo.appendChild(sectionTitle);
-
-//     var sectionPrice = document.createElement('span');
-//     sectionPrice.classList.add('post-price');
-//     sectionPrice.textContent = '$' + priceInput.value;
-//     sectionInfo.appendChild(sectionPrice);
-
-//     var sectionCity = document.createElement('span');
-//     sectionCity.classList.add('post-city');
-//     sectionCity.textContent = '(' + cityInput.value + ')';
-//     sectionInfo.appendChild(sectionCity);
-
-//     postSection.appendChild(objectSection);
-
-// }
-
-// makePost.onclick = function(){
-//     if(emptyModal()){
-//         alert("Please provide values for all input fields");
-//         return false;
-//     }
-//     addObject();
-//     exitModal();
-//     return true;
-// }
+function editFunction(){
+  var newbio = prompt("Please enter your new bio: ");
+  console.log("New bio: ", newbio);
+  bio.innerHTML = newbio;
+}
+if (edit) {
+  edit.addEventListener('click', editFunction);
+} 
