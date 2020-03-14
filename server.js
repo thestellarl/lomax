@@ -68,6 +68,10 @@ app.get('/uploadtrack', redirectLogin, function (req, res) {
     res.render('uploadtrack');
 });
 
+app.get('/', (req, res, next) => {
+    res.redirect('/login');
+});
+
 app.get('/profile', redirectLogin, function (req, res) {
     const { userId } = req.session;
     sess = req.session; 
@@ -112,7 +116,12 @@ app.post('/login', function (req, res) {
 });
 
 app.post('/logout', redirectLogin, function (req, res) {
-    
+    req.session.destroy(err => {
+        if(err) {
+            return res.redirect('/login');
+        }
+        res.clearCookie('sid');
+    });
 });
 
 app.listen(3000);
