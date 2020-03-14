@@ -4,18 +4,30 @@ var modal = document.getElementById('upload-track');
 
 var span = document.getElementsByClassName("close")[0];
 // When the user clicks on the button, open the modal
-upload.onclick = function() {
+function uploadFunction() {
  modal.style.display = "block";
 }
+if(upload) {
+  upload.addEventListener('click', uploadFunction)
+}
+
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+function spanFunction() {
  modal.style.display = "none";
 }
+if(span) {
+  span.addEventListener('click', spanFunction)
+}
+
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+function windowFunction(event) {
   if (event.target == modal) {
     modal.style.display = "none";
  }
+}
+
+if(window) {
+  window.addEventListener('click', windowFunction)
 }
 
 function toggleEntry(element){
