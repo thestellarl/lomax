@@ -6,9 +6,31 @@
     width: 100%;
 }
 
+#accountAction{
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 15em;
+  height: 3em;
+  overflow-y: hidden; 
+  cursor: pointer;
+}
+
+.showDropDown{
+  overflow-y: visible;
+}
+
+.arrowIcon{
+  transition: transform 0.5s;
+}
+
+.rotate90{
+  transform: rotateZ(90deg);
+}
+
 a{
     text-decoration: none;
-    color: black;
+    color: inherit;
 }
 .hyperlinks{
     display: block;
@@ -83,13 +105,16 @@ a{
 
 #header-wrapper{
     display: flex;
-    background-color:#DCD0F9;
+    background-color:#F28F3B;
     width: 100%;
     padding-left: 8px;
+    align-items: center;
+    justify-content: space-between;
 }
-#header-wrapper > h1 {
-    font-size: 8em;
+#header-title {
+    font-size: 5em;
     margin: 10px;
+    color: #588B8B;
 }
 #user-profile-image{
     min-width: 240px;
@@ -133,6 +158,10 @@ a{
   margin: 1em;
 }
 
+.center{
+  display: flex;
+  justify-content: center;
+}
 body{
     all: unset;
     font-family: 'Helvetica', sans-serif;
