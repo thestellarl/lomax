@@ -36,6 +36,10 @@ app.get('/profile', function (req, res) {
     res.render('profile_page');
 });
 
+app.get('/follow', function (req, res) {
+    res.render('follow_page');
+});
+
 app.get('/create', function (req, res) {
     res.render('create');
 });
