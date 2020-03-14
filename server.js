@@ -79,13 +79,14 @@ app.get('/profile', redirectLogin, function (req, res) {
                                 numFollowing: userMap[userId].following.length,
                                 username: userMap[userId].username
                             });
+});
 app.get('/follow', function (req, res) {
     res.render('follow_page');
 });
 
 app.get('/create', function (req, res) {
     res.render('create');
-
+});
 app.get('/register', redirectHome, function (req, res) {
     res.render('create');
 });
@@ -94,7 +95,7 @@ app.use(session({
     secret: 'keyboard cat',
     resave: false,
     saveUninitialized: true
-  }))
+}))
 
 app.get('/login', redirectHome, function (req, res) {
     const { userId } = req.session;
